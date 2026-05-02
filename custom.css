@@ -1,0 +1,1676 @@
+:root {
+    --PrimaryColor: #00408E;
+    --PrimaryLight: #E6F1FB;
+    --PrimaryBorder: #b3d0f0;
+    --BlackColor: #000;
+    --WhiteColor: #FFFFFF;
+}
+
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    /* pure gray-50 */
+    color: var(--BlackColor);
+    font-size: 0.875rem;
+}
+
+
+
+.onboarding-wrapper {
+    padding: 3rem 1rem;
+}
+
+.onboarding-wrapper .onboarding-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.onboarding-wrapper .onboarding-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--BlackColor);
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .onboarding-header p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748B;
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .onboarding-logo {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.onboarding-wrapper .wizard-container h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--PrimaryColor);
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .wizard-container p {
+    font-size: 0.875rem;
+    color: #6b7280;
+
+}
+
+.onboarding-wrapper .wizard-container {
+    background-color: var(--WhiteColor);
+    max-width: 60rem;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    border: 0.0625rem solid #f3f4f6;
+}
+
+/* Wizard Steps Indicator */
+.onboarding-wrapper .wizard-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.0625rem solid var(--PrimaryBorder);
+    background: var(--PrimaryLight);
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.onboarding-wrapper .wizard-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.onboarding-wrapper .wizard-step::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--PrimaryBorder);
+    z-index: -1;
+}
+
+.onboarding-wrapper .wizard-step:last-child::after {
+    display: none;
+}
+
+.onboarding-wrapper .wizard-step-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--PrimaryBorder);
+    color: var(--PrimaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem auto;
+    font-weight: 600;
+    font-size: 0.75rem;
+    border: 0.125rem solid var(--WhiteColor);
+}
+
+.onboarding-wrapper .wizard-step.active .wizard-step-icon {
+    background-color: var(--PrimaryColor);
+    color: var(--WhiteColor);
+}
+
+.onboarding-wrapper .wizard-step-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--BlackColor);
+    margin-bottom: 0.125rem;
+}
+
+.onboarding-wrapper .wizard-step.active .wizard-step-title {
+    font-weight: 700;
+    color: var(--PrimaryColor);
+}
+
+.onboarding-wrapper .wizard-step-desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+    max-width: 10rem;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   PARENT CLASSES â€” New / Missing (Step & Section Wrappers)
+   ============================================================ */
+
+/* Each step's content panel */
+.onboarding-wrapper .step-content {
+    width: 100%;
+}
+
+/* The <form> element inside each step */
+.onboarding-wrapper .step-form {
+    width: 100%;
+}
+
+/* Wraps one section: form-section-title + row (Steps 1 & 2) */
+.onboarding-wrapper .form-section {
+    margin-bottom: 0.25rem;
+}
+
+/* Wrapper for each pricing sub-section (Step 3) */
+.onboarding-wrapper .section-content {
+    margin-bottom: 2.5rem;
+}
+
+.onboarding-wrapper .section-content:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Clean card list â€” no outer border (Step 4) */
+.onboarding-wrapper .content-block-clean {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Dynamic rooms / facilities containers (Step 4) */
+.onboarding-wrapper .rooms-container,
+.onboarding-wrapper .facilities-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* Wrapper for static room sections (Step 2) */
+.onboarding-wrapper .room-static-section {
+    margin-bottom: 0.25rem;
+}
+
+/* Form Styles */
+.onboarding-wrapper .form-section-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--PrimaryColor);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--PrimaryColor);
+    /* border-bottom: 1px solid var(--PrimaryBorder); */
+}
+
+.onboarding-wrapper .form-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--BlackColor);
+    margin-bottom: 0.375rem;
+}
+
+.onboarding-wrapper .form-control,
+.onboarding-wrapper .form-select {
+    font-size: 0.9375rem;
+    padding: 0.75rem 1rem;
+    border-color: #d1d5db;
+    border-radius: 0.375rem;
+    color: var(--BlackColor);
+    min-height: 2.75rem;
+    box-shadow: none;
+}
+
+.onboarding-wrapper .form-control::placeholder {
+    color: #9ca3af;
+}
+
+.onboarding-wrapper .form-control:focus,
+.onboarding-wrapper .form-select:focus {
+    border-color: var(--PrimaryColor);
+    box-shadow: 0 0 0 3px rgba(0, 64, 142, 0.08);
+    outline: none;
+}
+
+.onboarding-wrapper textarea.form-control {
+    min-height: 6rem;
+    resize: vertical;
+}
+
+/* Inputs with trailing icons */
+.onboarding-wrapper .input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* .input-with-icon .form-control {
+    padding-right: 2.25rem;
+} */
+
+.onboarding-wrapper .input-with-icon .lucide {
+    position: absolute;
+    right: 0.75rem;
+    color: #6b7280;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+}
+
+/* Footer Buttons */
+.onboarding-wrapper .wizard-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    /* border-top: 1px solid #f3f4f6; */
+}
+
+.onboarding-wrapper .btn-wizard-back {
+    background-color: #e5e7eb;
+    color: #000;
+    border: solid 1px #e5e7eb;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    transition: background-color 0.2s;
+}
+
+.onboarding-wrapper .btn-wizard-back:hover {
+    background-color: var(--BlackColor);
+    color: var(--WhiteColor);
+}
+
+.onboarding-wrapper .btn-wizard-next {
+    background-color: var(--PrimaryColor);
+    color: var(--WhiteColor);
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    border: solid 1px var(--PrimaryColor);
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    transition: background-color 0.2s;
+}
+
+.onboarding-wrapper .btn-wizard-next:hover {
+    background-color: var(--BlackColor);
+}
+
+.onboarding-wrapper .btn-wizard-next .lucide {
+    width: 1rem;
+    height: 1rem;
+}
+
+.onboarding-wrapper .btn-wizard-back .lucide {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* File Upload Styles */
+.onboarding-wrapper .upload-dropzone {
+    border: 0.125rem dashed #d1d5db;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.onboarding-wrapper .upload-dropzone:hover {
+    background-color: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+.onboarding-wrapper .upload-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #9ca3af;
+    margin-bottom: 0.75rem;
+}
+
+.onboarding-wrapper .guidelines-alert {
+    background-color: #f0fdfa;
+    border: 0.0625rem solid #ccfbf1;
+    color: #0f766e;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+}
+
+.onboarding-wrapper .guidelines-alert ul {
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding-left: 1.25rem;
+}
+
+/* Nested Form Structure Styles */
+.onboarding-wrapper .content-block-bordered {
+    border: 0.0625rem solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--WhiteColor);
+}
+
+.onboarding-wrapper .block-header .block-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--PrimaryLight);
+    /* light indigo to subtly match theme and highlight step */
+    color: var(--PrimaryColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-right: 1.25rem;
+    flex-shrink: 0;
+}
+
+.onboarding-wrapper .block-header .block-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--BlackColor);
+    margin-bottom: 0.25rem;
+}
+
+.onboarding-wrapper .block-header .block-desc {
+    font-size: 0.9375rem;
+    color: #4b5563;
+    margin-bottom: 0;
+}
+
+.onboarding-wrapper .inner-field-card {
+    background-color: #f9fafb;
+    border: 0.0625rem solid #f3f4f6;
+    border-radius: 0.625rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.inner-field-card:last-child {
+    margin-bottom: 0;
+}
+
+.onboarding-wrapper .dashed-box {
+    border: 0.125rem dashed #d1d5db;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.onboarding-wrapper .custom-file-upload-row {
+    background-color: var(--WhiteColor);
+    border: 0.0625rem solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.25rem;
+    display: flex;
+    /* flex allows filling width nicely */
+    align-items: center;
+    width: 100%;
+}
+
+.onboarding-wrapper .hint-box {
+    background-color: #fefce8;
+    border-left: 0.1875rem solid #facc15;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+    font-size: 0.8125rem;
+    color: #854d0e;
+    display: flex;
+    align-items: center;
+}
+
+.onboarding-wrapper .image-placeholder {
+    background-color: #f9fafb;
+    border: 0.0625rem dashed #d1d5db;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.onboarding-wrapper .image-placeholder.rounded-circle {
+    border-radius: 50%;
+}
+
+.onboarding-wrapper .image-placeholder .dimensions {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--BlackColor);
+    margin-bottom: 0.125rem;
+}
+
+.onboarding-wrapper .image-placeholder .sub-text {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.onboarding-wrapper .dashed-border-btn {
+    border: 0.0625rem dashed #cdced1;
+    color: var(--PrimaryColor);
+    background-color: transparent;
+}
+
+.onboarding-wrapper .dashed-border-btn:hover {
+    background-color: #f3f4f6;
+}
+
+/* Step 4 Clean Slate Custom Classes */
+.onboarding-wrapper .checklist-banner {
+    background-color: var(--PrimaryLight);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.onboarding-wrapper .checklist-icon {
+    color: var(--PrimaryColor);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.onboarding-wrapper .checklist-title {
+    color: var(--PrimaryColor);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.onboarding-wrapper .checklist-desc {
+    color: var(--PrimaryColor);
+    font-size: 0.8125rem;
+    margin-bottom: 0;
+}
+
+.onboarding-wrapper .step-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.onboarding-wrapper .pill-btn {
+    background-color: var(--WhiteColor);
+    border: 0.0625rem solid #e5e7eb;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+    color: var(--BlackColor);
+}
+
+.onboarding-wrapper .pill-active {
+    border-color: #c7d2fe;
+    color: var(--PrimaryColor);
+}
+
+.onboarding-wrapper .wizard-picture-form .block-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.onboarding-wrapper .wizard-picture-form .field-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--BlackColor);
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+}
+
+.onboarding-wrapper .wizard-picture-form .field-icon {
+    width: 1.125rem;
+    margin-right: 0.5rem;
+}
+
+/* Specific Icon Colors extracted from inline styles */
+.onboarding-wrapper .icon-red {
+    color: #f43f5e;
+}
+
+.onboarding-wrapper .icon-yellow {
+    color: #f59e0b;
+    fill: #f59e0b;
+}
+
+.onboarding-wrapper .icon-green {
+    color: #10b981;
+}
+
+.onboarding-wrapper .icon-gray {
+    color: #6b7280;
+}
+
+.onboarding-wrapper .icon-orange {
+    color: #f97316;
+}
+
+.onboarding-wrapper .icon-blue {
+    color: #0ea5e9;
+}
+
+.onboarding-wrapper .icon-darkblue {
+    color: #3b82f6;
+}
+
+.onboarding-wrapper .icon-indigo {
+    color: var(--PrimaryColor);
+}
+
+.onboarding-wrapper .wizard-picture-form .form-control {
+    background-color: var(--WhiteColor);
+}
+
+.onboarding-wrapper .logo-box-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .onboarding-wrapper .logo-box-group {
+        flex-direction: row;
+    }
+}
+
+.onboarding-wrapper .logo-box {
+    flex: 1;
+    background-color: var(--WhiteColor);
+    border: 0.0625rem solid #e5e7eb;
+    padding: 1.5rem 0;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.onboarding-wrapper .logo-box-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.onboarding-wrapper .landscape-box {
+    width: 10.625rem;
+    height: 3.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .square-box {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .file-input-margin {
+    margin-bottom: 1rem;
+}
+
+.onboarding-wrapper .field-hint {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.onboarding-wrapper .field-sub-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.onboarding-wrapper .field-desc {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+/* Updates to existing hint box */
+.onboarding-wrapper .hint-box {
+    background-color: #fffbeb;
+    border-radius: 0.375rem;
+    margin-bottom: 1.25rem;
+}
+
+.onboarding-wrapper .hint-spaced {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.onboarding-wrapper .hint-icon {
+    width: 1.125rem;
+    margin-right: 0.5rem;
+}
+
+.onboarding-wrapper .hint-text {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #1f2937;
+}
+
+.onboarding-wrapper .hint-text strong {
+    font-weight: 700;
+    color: var(--BlackColor);
+}
+
+.onboarding-wrapper .placeholder-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .dashed-border-btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    font-weight: 500;
+}
+
+.onboarding-wrapper .dashed-spaced {
+    margin-top: 1rem;
+}
+
+.onboarding-wrapper .btn-icon {
+    margin-right: 0.25rem;
+    width: 1.25rem;
+}
+
+.onboarding-wrapper .test-block {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 1.5rem;
+}
+
+.onboarding-wrapper .test-card {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 1.5rem;
+}
+
+.onboarding-wrapper .test-smile-box {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.onboarding-wrapper .test-smile {
+    font-size: 2rem;
+}
+
+.onboarding-wrapper .dims-margin {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.onboarding-wrapper .wizard-picture-form .form-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+}
+
+.onboarding-wrapper .footer-btn {
+    padding: 0.5rem 3rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.onboarding-wrapper .draft-btn {
+    background-color: var(--WhiteColor);
+    border: 0.0625rem solid #e5e7eb;
+}
+
+.onboarding-wrapper .submit-btn {
+    background-color: var(--PrimaryColor);
+    color: var(--WhiteColor);
+    border: solid 1px var(--PrimaryColor);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.onboarding-wrapper .submit-btn:hover {
+    background-color: var(--BlackColor);
+    border-color: var(--BlackColor);
+    color: var(--WhiteColor);
+}
+
+/* Dynamic Items Adjustments */
+.dynamic-item .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dynamic-item .field-label {
+    margin-bottom: 0;
+}
+
+.onboarding-wrapper .item-title {
+    color: var(--BlackColor);
+}
+
+.onboarding-wrapper .btn-remove-item {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.onboarding-wrapper .btn-remove-item:hover {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.onboarding-wrapper .remove-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.onboarding-wrapper .mt-3 {
+    margin-top: 1rem;
+}
+
+/* Pricing Form Specific Styles */
+.onboarding-wrapper .info-banner {
+    background: #E6F1FB;
+    border-left: 0.25rem solid var(--PrimaryColor);
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    margin-bottom: 2rem;
+}
+
+.onboarding-wrapper .info-banner h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--PrimaryColor);
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .info-banner p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.onboarding-wrapper .section {
+    margin-bottom: 3rem;
+}
+
+.onboarding-wrapper .section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #F1EFE8;
+}
+
+.onboarding-wrapper .section-number {
+    background: var(--PrimaryColor);
+    color: var(--WhiteColor);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+
+.onboarding-wrapper .section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--BlackColor);
+    margin: 0;
+}
+
+.onboarding-wrapper .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.onboarding-wrapper .form-help {
+    display: block;
+    font-size: 0.8125rem;
+    color: #888780;
+    margin-bottom: 0.5rem;
+}
+
+.onboarding-wrapper .input-field {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.onboarding-wrapper .input-field:focus {
+    outline: none;
+    border-color: var(--BlackColor);
+}
+
+.onboarding-wrapper .input-field:disabled {
+    background: #FAFAF9;
+    cursor: not-allowed;
+    color: #888780;
+}
+
+.onboarding-wrapper .input-group {
+    display: flex;
+    gap: 0;
+    align-items: center;
+}
+
+.onboarding-wrapper .step-description{    color: var(--BlackColor);
+    font-size: 0.875rem; margin-bottom: 0.7rem;}
+.onboarding-wrapper .input-prefix {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #5F5E5A;
+}
+
+/* --- Step 3: Pricing Form Modern Styles --- */
+
+/* Base Rate Pricing Cards */
+.onboarding-wrapper .pricing-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.onboarding-wrapper .pricing-room-card {
+    background: var(--WhiteColor);
+    border: 1px solid #EAE9E1;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.onboarding-wrapper .pricing-room-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.onboarding-wrapper .pricing-room-header {
+    background: #FAFAF9;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #EAE9E1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.onboarding-wrapper .room-badge {
+    background: #EAE9E1;
+    color: #5F5E5A;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+
+.onboarding-wrapper .pricing-subroom-list {
+    padding: 0.5rem 0;
+}
+
+.onboarding-wrapper .pricing-subroom-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid #F5F4F0;
+}
+
+.onboarding-wrapper .pricing-subroom-item:last-child {
+    border-bottom: none;
+}
+
+.onboarding-wrapper .subroom-name {
+    font-weight: 500;
+    color: #5F5E5A;
+    font-size: 0.9375rem;
+}
+
+.onboarding-wrapper .subroom-price-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Age Configuration Cards */
+.onboarding-wrapper .age-config-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.onboarding-wrapper .age-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--WhiteColor);
+    border: 1px solid #f3f4f6;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.onboarding-wrapper .age-card:hover {
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.onboarding-wrapper .age-icon-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #f3f4f6;
+    color: var(--PrimaryColor);
+    border-radius: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.onboarding-wrapper .age-icon-box i {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.onboarding-wrapper .age-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.onboarding-wrapper .age-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.onboarding-wrapper .age-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--BlackColor);
+}
+
+.onboarding-wrapper .age-input {
+    width: 4.5rem;
+    height: 2.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    color: var(--BlackColor);
+    padding: 0 0.5rem;
+    transition: border-color 0.2s;
+}
+
+.onboarding-wrapper .age-input:focus {
+    outline: none;
+    border-color: var(--PrimaryColor);
+    box-shadow: 0 0 0 3px rgba(0, 64, 142, 0.05);
+}
+
+/* Hide spin buttons */
+.onboarding-wrapper .age-input::-webkit-outer-spin-button,
+.onboarding-wrapper .age-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.onboarding-wrapper .age-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.onboarding-wrapper .age-suffix,
+.onboarding-wrapper .range-separator {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+
+/* Meal Pricing Section */
+.onboarding-wrapper .meal-pricing-wrapper {
+    background: var(--WhiteColor);
+    border: 1px solid #EAE9E1;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.onboarding-wrapper .meal-grid-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background: #FAFAF9;
+    border-bottom: 1px solid #EAE9E1;
+    padding: 1rem 1.5rem;
+}
+
+.onboarding-wrapper .th-meal {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #5F5E5A;
+    text-transform: uppercase;
+}
+
+.onboarding-wrapper .th-price {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #5F5E5A;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.onboarding-wrapper .age-badge {
+    text-transform: none;
+    font-weight: 500;
+    color: #888780;
+    margin-left: 0.25rem;
+}
+
+.onboarding-wrapper .meal-row-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #F5F4F0;
+    align-items: center;
+}
+
+.onboarding-wrapper .meal-row-card:last-child {
+    border-bottom: none;
+}
+
+.onboarding-wrapper .meal-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--BlackColor);
+}
+
+.onboarding-wrapper .meal-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--PrimaryColor);
+    opacity: 0.8;
+}
+
+.onboarding-wrapper .meal-price-cell {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.onboarding-wrapper .meal-input {
+    width: 100%;
+    max-width: 160px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 0.9375rem;
+    color: var(--BlackColor);
+    text-align: right;
+    font-weight: 400;
+}
+
+.onboarding-wrapper .meal-input:focus {
+    outline: none;
+    border-color: var(--BlackColor);
+}
+
+.onboarding-wrapper .icon-darkblue {
+    color: #1e3a8a;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.onboarding-wrapper .price-input {
+    width: 140px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9375rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    text-align: right;
+    font-weight: 500;
+}
+
+.onboarding-wrapper .price-input:focus {
+    outline: none;
+    border-color: var(--BlackColor);
+}
+
+@media (max-width: 768px) {
+
+    .meal-grid-header,
+    .meal-row-card {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .th-price {
+        text-align: left;
+    }
+
+    .meal-price-cell {
+        justify-content: flex-start;
+    }
+
+    .meal-input {
+        max-width: 100%;
+    }
+}
+
+.onboarding-wrapper .currency-symbol {
+    color: #888780;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.onboarding-wrapper .meal-header {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #5F5E5A;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1rem;
+}
+
+.onboarding-wrapper .warning-banner {
+    background: #FAEEDA;
+    border-left: 4px solid #BA7517;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #5F5E5A;
+}
+
+.onboarding-wrapper .success-banner {
+    background: #EAF3DE;
+    border-left: 4px solid #639922;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #5F5E5A;
+}
+
+@media (max-width: 768px) {
+    .meal-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .meal-name {
+        border-radius: 0.375rem 0.375rem 0 0;
+    }
+
+    .meal-row:not(:last-child) .meal-input-wrapper:last-child {
+        margin-bottom: 1.5rem;
+    }
+
+    .onboarding-wrapper .inner-field-card {
+        padding: 1rem;
+    }
+}
+
+/* New classes to replace inline styles */
+.onboarding-wrapper .unit-select-width {
+    max-width: 6rem;
+    flex: none;
+}
+
+.onboarding-wrapper .currency-select-width {
+    max-width: 300px;
+}
+
+.onboarding-wrapper .pricing-room-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.onboarding-wrapper .pricing-form-help {
+    margin-bottom: 1rem;
+}
+
+.onboarding-wrapper .price-input-warning {
+    border-color: #f59e0b;
+}
+
+.onboarding-wrapper .price-input-default {
+    border-color: #d1d5db;
+}
+
+.onboarding-wrapper .text-right {
+    text-align: right;
+}
+
+.onboarding-wrapper .justify-content-end {
+    justify-content: flex-end;
+}
+
+.onboarding-wrapper .pricing-footer-section {
+    border-top: 2px solid #F1EFE8;
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
+.onboarding-wrapper .opacity-6e {
+    opacity: 0.6;
+}
+
+/* ============================================================
+   Room Inventory â€” Dynamic Card System (Parent + Responsive)
+   ============================================================ */
+
+/* Parent wrapper for the entire room inventory section */
+.onboarding-wrapper .room-inventory-section {
+    margin-top: 0.5rem;
+}
+
+/* List that holds all room cards */
+.onboarding-wrapper .room-inventory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Individual room card */
+.onboarding-wrapper .room-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: var(--WhiteColor);
+    transition: box-shadow 0.2s;
+}
+
+.onboarding-wrapper .room-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 64, 142, 0.07);
+}
+
+/* Card header: title + delete button */
+.onboarding-wrapper .room-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* "Room 1", "Room 2" title */
+.onboarding-wrapper .room-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--BlackColor);
+    margin: 0;
+}
+
+/* Trash / delete button */
+.onboarding-wrapper .btn-room-delete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.375rem;
+    color: #9ca3af;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.onboarding-wrapper .btn-room-delete:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.onboarding-wrapper .btn-subroom-delete {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.375rem;
+    color: #9ca3af;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.onboarding-wrapper .btn-subroom-delete:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.onboarding-wrapper .room-delete-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+/* Fields grid inside each card */
+.onboarding-wrapper .room-card .row {
+    row-gap: 0.875rem;
+}
+
+/* Subroom list (Step 2) */
+.onboarding-wrapper #subroom-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* "+ Add another room" dashed button */
+.onboarding-wrapper .btn-add-another-room {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.875rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: 1.5px dashed var(--PrimaryBorder);
+    border-radius: 0.75rem;
+    color: var(--PrimaryColor);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.onboarding-wrapper .btn-add-another-room:hover {
+    background-color: var(--PrimaryLight);
+    border-color: var(--PrimaryColor);
+}
+
+.onboarding-wrapper .btn-add-room-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+/* ============================================================
+   Global Responsive Styles
+   ============================================================ */
+
+/* Large desktop (â‰¥ 1280px) â€” already full width at 80rem */
+
+/* Medium desktop / laptop (< 1280px) */
+@media (max-width: 1280px) {
+    .onboarding-wrapper .wizard-container {
+        max-width: 95%;
+        padding: 2rem;
+    }
+}
+
+/* Tablet landscape (< 1024px) */
+@media (max-width: 1024px) {
+    .onboarding-wrapper .wizard-container {
+        max-width: 98%;
+        padding: 1.75rem 1.5rem;
+    }
+
+    .onboarding-wrapper .age-config-cards {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .onboarding-wrapper .pricing-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+/* Tablet portrait (< 768px) */
+@media (max-width: 768px) {
+    .onboarding-wrapper {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .onboarding-wrapper .onboarding-logo {
+        max-height: 48px;
+    }
+
+    .onboarding-wrapper .onboarding-header h1 {
+        font-size: 1.25rem;
+    }
+
+    .onboarding-wrapper .wizard-container {
+        padding: 1.25rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+    /* Wizard steps: smaller text, tighter spacing */
+    .onboarding-wrapper .wizard-steps {
+        padding: 1rem 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .onboarding-wrapper .wizard-step-title {
+        font-size: 0.625rem;
+    }
+
+    .onboarding-wrapper .wizard-step-icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        font-size: 0.6875rem;
+    }
+
+    /* Step content headings */
+    .onboarding-wrapper .step-content h2 {
+        font-size: 1.1rem;
+    }
+
+    /* Section titles */
+    .onboarding-wrapper .form-section-title {
+        font-size: 0.8125rem;
+        margin-top: 1.5rem;
+    }
+
+    /* All 3-col and 2-col grids go full width on tablet */
+    .onboarding-wrapper .col-md-4,
+    .onboarding-wrapper .col-md-6 {
+        width: 100%;
+    }
+
+    /* Room card adjustments */
+    .onboarding-wrapper .room-card {
+        padding: 1rem;
+    }
+
+    .onboarding-wrapper .room-card-title {
+        font-size: 0.9375rem;
+    }
+
+    /* Pricing cards stack */
+    .onboarding-wrapper .pricing-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .onboarding-wrapper .age-config-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Currency select full width */
+    .onboarding-wrapper .currency-select-width {
+        max-width: 100%;
+    }
+
+    /* Footer buttons */
+    .onboarding-wrapper .wizard-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+    }
+
+    .onboarding-wrapper .btn-wizard-back,
+    .onboarding-wrapper .btn-wizard-next {
+        font-size: 0.8125rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .onboarding-wrapper .test-smile-box {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+/* Mobile (< 576px) */
+@media (max-width: 576px) {
+    .onboarding-wrapper {
+        padding: 1rem 0.5rem;
+    }
+
+    .onboarding-wrapper .onboarding-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .onboarding-wrapper .onboarding-logo {
+        max-height: 40px;
+    }
+
+    .onboarding-wrapper .onboarding-header h1 {
+        font-size: 1.125rem;
+    }
+
+    .onboarding-wrapper .wizard-container {
+        padding: 1rem 0.75rem;
+    }
+
+    /* Wizard steps: hide text on very small screens */
+    .onboarding-wrapper .wizard-steps {
+        padding: 0.75rem 0.25rem;
+    }
+
+    .onboarding-wrapper .wizard-step-title {
+        display: none;
+    }
+
+    .onboarding-wrapper .wizard-step-icon {
+        width: 1.625rem;
+        height: 1.625rem;
+        font-size: 0.625rem;
+        margin-bottom: 0;
+    }
+
+    /* Section titles */
+    .onboarding-wrapper .form-section-title {
+        font-size: 0.75rem;
+        padding-left: 0.5rem;
+    }
+
+    /* Form controls slightly smaller */
+    .onboarding-wrapper .form-control,
+    .onboarding-wrapper .form-select {
+        font-size: 0.875rem;
+        padding: 0.625rem 0.75rem;
+        min-height: 2.5rem;
+    }
+
+    /* Room card */
+    .onboarding-wrapper .room-card {
+        padding: 0.875rem;
+        border-radius: 0.5rem;
+    }
+
+    .onboarding-wrapper .btn-add-another-room {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+    }
+
+    /* Pricing */
+    .onboarding-wrapper .meal-grid-header,
+    .onboarding-wrapper .meal-row-card {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .onboarding-wrapper .th-price {
+        text-align: left;
+    }
+
+    .onboarding-wrapper .meal-price-cell {
+        justify-content: flex-start;
+    }
+
+    .onboarding-wrapper .meal-input {
+        max-width: 100%;
+    }
+
+    /* Footer buttons */
+    .onboarding-wrapper .wizard-footer {
+        gap: 0.5rem;
+    }
+
+    .onboarding-wrapper .btn-wizard-back,
+    .onboarding-wrapper .btn-wizard-next {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.875rem;
+    }
+
+    /* Age cards stack */
+    .onboarding-wrapper .age-card {
+        padding: 1rem;
+    }
+
+    .onboarding-wrapper .age-icon-box {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}

@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Property Onboarding</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Google Fonts: Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="custom.css" />
+        <!-- Lucide Icons -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+
+    <body>
+        <div class="onboarding-wrapper">
+            <!-- Title -->
+            <div class="onboarding-header">
+                <img src="logo.svg" alt="Logo" class="onboarding-logo" />
+                <h1>Property Onboarding</h1>
+                <p>Complete all four steps to register your property.</p>
+            </div>
+
+            <!-- Form Container -->
+            <div class="wizard-container">
+                <!-- Wizard Steps Header -->
+                <div class="wizard-steps">
+                    <div class="wizard-step active" id="nav-step-1">
+                        <div class="wizard-step-icon">1</div>
+                        <div class="wizard-step-title">General Data</div>
+                        <!-- <div class="wizard-step-desc">Hotel, contact & tax information</div> -->
+                    </div>
+                    <div class="wizard-step" id="nav-step-2">
+                        <div class="wizard-step-icon">2</div>
+                        <div class="wizard-step-title">Create Subroom Type</div>
+                    </div>
+                    <div class="wizard-step" id="nav-step-3">
+                        <div class="wizard-step-icon">3</div>
+                        <div class="wizard-step-title">Room inventory</div>
+                    </div>
+                    <div class="wizard-step" id="nav-step-4">
+                        <div class="wizard-step-icon">4</div>
+                        <div class="wizard-step-title">Pricing</div>
+                    </div>
+                    <div class="wizard-step" id="nav-step-5">
+                        <div class="wizard-step-icon">5</div>
+                        <div class="wizard-step-title">Pictures</div>
+                    </div>
+                    <div class="wizard-step" id="nav-step-6">
+                        <div class="wizard-step-icon">6</div>
+                        <div class="wizard-step-title">Pictures</div>
+                    </div>
+                </div>
+
+                <!-- STEP 1 CONTENT -->
+                <div class="step-content" id="step-1">
+                    <h2>General Data</h2>
+                    <div class="step-description">Hotel, contact & tax information</div>
+
+                    <form action="#" method="POST" class="step-form">
+                        <!-- Section: Hotel & Company -->
+                        <div class="form-section">
+                            <div class="form-section-title">Hotel & Company</div>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Hotel name *</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Company name</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Company details</label>
+                                    <textarea class="form-control" placeholder=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section: Full hotel address -->
+                        <div class="form-section">
+                            <div class="form-section-title">Full hotel address</div>
+                            <div class="row gy-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Property number</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">First line of address</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Second line of address</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">District</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">City / Town</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Region / State</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Post code</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Country</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+
+                            <!-- Section: Location for maps -->
+                            <div class="form-section-title">Location for maps</div>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Hotel latitude</label>
+                                    <input type="text" class="form-control" placeholder="e.g. 40.7128" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Hotel longitude</label>
+                                    <input type="text" class="form-control" placeholder="e.g. -74.0060" />
+                                </div>
+                            </div>
+
+                            <!-- Section: Hotel owner / client contact -->
+                            <div class="form-section-title">Hotel owner / client contact</div>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First name</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last name</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Mobile phone</label>
+                                    <input type="tel" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+
+                            <!-- Section: Hotel Manager -->
+                            <div class="form-section-title">Hotel Manager</div>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">First name</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last name</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email address</label>
+                                    <input type="email" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Mobile number</label>
+                                    <input type="tel" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+
+                            <!-- Section: Hotel web address & contacts -->
+                            <div class="form-section-title">Hotel web address & contacts</div>
+                            <div class="row gy-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Hotel website URL</label>
+                                    <input type="url" class="form-control" placeholder="https://" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Reservations email</label>
+                                    <input type="email" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Reservations phone</label>
+                                    <input type="tel" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">WhatsApp phone</label>
+                                    <input type="tel" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Facebook account</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Instagram account</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+
+                            <!-- Section: Rating & check-in / out -->
+                            <div class="form-section-title">Rating & check-in / out</div>
+                            <div class="row gy-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Hotel star rating</label>
+                                    <select class="form-select">
+                                        <option selected>3 stars</option>
+                                        <option value="1">1 star</option>
+                                        <option value="2">2 stars</option>
+                                        <option value="4">4 stars</option>
+                                        <option value="5">5 stars</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Check-in from</label>
+                                    <div class="input-with-icon">
+                                        <input type="time" class="form-control" value="--:--" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Check-out to</label>
+                                    <div class="input-with-icon">
+                                        <input type="time" class="form-control" value="--:--" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section: For seasonal hotels only -->
+                            <div class="form-section-title">For seasonal hotels only</div>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Date hotel opens</label>
+                                    <div class="input-with-icon">
+                                        <input type="date" class="form-control" placeholder="dd-mm-yyyy" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date hotel closes</label>
+                                    <div class="input-with-icon">
+                                        <input type="date" class="form-control" placeholder="dd-mm-yyyy" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section: VAT / Tax -->
+                            <div class="form-section-title">VAT / Tax</div>
+                            <div class="row gy-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">VAT / Tax number</label>
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Tax rate - meals / food / beverages (%)</label>
+                                    <input type="number" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Tax rate - room accommodation (%)</label>
+                                    <input type="number" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Additional city tax (%)</label>
+                                    <input type="number" class="form-control" placeholder="" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">Other tax (%)</label>
+                                    <input type="number" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+
+                            <!-- Section: Description -->
+                            <div class="form-section-title">Description</div>
+                            <div class="row gy-3">
+                                <div class="col-12">
+                                    <label class="form-label">Hotel description</label>
+                                    <textarea class="form-control" placeholder=""></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Footer Buttons -->
+                            <div class="wizard-footer">
+                                <button type="button" class="btn-wizard-back" disabled>
+                                    <i data-lucide="chevron-left"></i>
+                                    Back
+                                </button>
+                                <button type="button" class="btn-wizard-next" onclick="showStep(2)">
+                                    Next
+                                    <i data-lucide="chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- STEP 2 CONTENT -->
+                <div class="step-content d-none" id="step-2">
+                    <h2>Create Subroom Type</h2>
+                    <div class="step-description">Manage your property's room inventory and details.</div>
+
+                    <form action="#" method="POST">
+                        <!-- Dynamic Subroom Cards -->
+                        <div id="subroom-list">
+                            <!-- Subroom 1 (default) -->
+                            <div class="room-card">
+                                <div class="room-card-header">
+                                    <h6 class="room-card-title">Subroom 1</h6>
+                                </div>
+
+                                <!-- Section: Room Identification -->
+                                <div class="form-section-title">Room Identification</div>
+                                <div class="row gy-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Room type</label>
+                                        <input type="text" class="form-control" placeholder="e.g. Double" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Subroom type</label>
+                                        <input type="text" class="form-control" placeholder="e.g. Deluxe" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Number Of Rooms</label>
+                                        <input type="text" class="form-control" placeholder="e.g. 101" />
+                                    </div>
+                                </div>
+
+                                <!-- Section: Occupancy Limits -->
+                                <div class="form-section-title">Occupancy Limits</div>
+                                <div class="row gy-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Minimum occupants</label>
+                                        <input type="number" class="form-control" placeholder="1" min="1" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Max occupants</label>
+                                        <input type="number" class="form-control" placeholder="2" min="1" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Min adults</label>
+                                        <input type="number" class="form-control" placeholder="1" min="1" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Max adults</label>
+                                        <input type="number" class="form-control" placeholder="2" min="1" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Max children</label>
+                                        <input type="number" class="form-control" placeholder="1" min="0" />
+                                    </div>
+                                </div>
+
+                                <!-- Section: Bed Details & Sizing -->
+                                <div class="form-section-title">Bed Details & Sizing</div>
+                                <div class="row gy-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label">Bed size (single, double, king, queen)</label>
+                                        <select class="form-select">
+                                            <option selected disabled>Select bed size</option>
+                                            <option value="single">Single</option>
+                                            <option value="double">Double</option>
+                                            <option value="queen">Queen</option>
+                                            <option value="king">King</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Approx room size</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" placeholder="e.g. 350" />
+                                            <select class="form-select unit-select-width">
+                                                <option value="sqm">m²</option>
+                                                <option value="sqft" selected>ft²</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Sofabed</label>
+                                        <select class="form-select">
+                                            <option value="no" selected>No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /subroom-list -->
+
+                        <!-- Add another subroom -->
+                        <button type="button" class="btn-add-another-room" id="btn-add-subroom-card">
+                            <i data-lucide="plus" class="btn-add-room-icon"></i>
+                            Add another subroom
+                        </button>
+
+                        <!-- Footer Buttons -->
+                        <div class="wizard-footer">
+                            <button type="button" class="btn-wizard-back" onclick="showStep(1)">
+                                <i data-lucide="chevron-left"></i>
+                                Back
+                            </button>
+                            <button type="button" class="btn-wizard-next" onclick="showStep(3)">
+                                Next
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- STEP 3 CONTENT -->
+                <div class="step-content d-none" id="step-3">
+
+                        <!-- Section: Room List -->
+                        <div class="form-section-title">Room List</div>
+
+                        <!-- Dynamic Room Cards -->
+                        <div class="room-inventory-list" id="room-inventory-list">
+                            <!-- Room 1 (default - no delete button) -->
+                            <div class="room-card">
+                                <div class="room-card-header">
+                                    <h6 class="room-card-title">Room 1</h6>
+                                </div>
+                                <div class="row gy-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Room type *</label>
+                                        <input type="text" class="form-control" placeholder="e.g. Deluxe Double" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Subroom Type</label>
+                                        <input type="number" class="form-control" value="1" min="1" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Room floor / Location</label>
+                                        <input type="text" class="form-control" placeholder="e.g. Ground, 1st Floor" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Room Name (if applicable)</label>
+                                        <input type="text" class="form-control" placeholder="e.g. Ocean View Suite" />
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="form-label">Room number</label>
+                                        <input type="text" class="form-control" placeholder="e.g. 101" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /room-inventory-list -->
+
+                        <!-- Add another room -->
+                        <button type="button" class="btn-add-another-room" id="btn-add-room-card">
+                            <i data-lucide="plus" class="btn-add-room-icon"></i>
+                            Add another room
+                        </button>
+
+                        <!-- Footer Buttons -->
+                        <div class="wizard-footer">
+                            <button type="button" class="btn-wizard-back" onclick="showStep(2)">
+                                <i data-lucide="chevron-left"></i>
+                                Back
+                            </button>
+                            <button type="button" class="btn-wizard-next" onclick="showStep(4)">
+                                Next
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- STEP 3 CONTENT -->
+                <!-- ADDED: Close Step 3 -->
+
+                <!-- STEP 4 CONTENT -->
+                <div class="step-content d-none" id="step-4">
+                    <h2>Pricing</h2>
+                    <div class="step-description">Set up your base rates and meal pricing structure.</div>
+
+                    <form action="#" method="POST" id="pricing-form">
+                        <!-- Information Banner -->
+                        <!-- <div class="info-banner">
+                        <h3>Important: About base pricing</h3>
+                        <p>All prices you enter are <strong>Base Gross Selling Rates</strong> - these are your standard rates before any discounts or increases. These base rates will be used across your OTA channels and booking engine. You can adjust prices anytime by day or month, and discounts/promotions are applied as percentages from these base rates.</p>
+                    </div> -->
+
+                        <!-- Section 1: Base Rate Pricing -->
+                        <div class="section-content">
+                            <div class="form-section-title">Base rate pricing</div>
+
+                            <!-- <div class="success-banner">
+                            <strong>Auto-populated from inventory:</strong> Room types and subroom types are
+                            automatically loaded from your inventory page to prevent data entry errors.
+                        </div> -->
+
+                            <div class="form-group">
+                                <label class="form-label">Currency</label>
+                                <select id="currency" class="form-select currency-select-width">
+                                    <option value="INR">₹ Indian Rupee (INR)</option>
+                                    <option value="USD">$ US Dollar (USD)</option>
+                                    <option value="EUR">€ Euro (EUR)</option>
+                                    <option value="GBP">£ British Pound (GBP)</option>
+                                    <option value="AED">د.إ UAE Dirham (AED)</option>
+                                    <option value="SGD">S$ Singapore Dollar (SGD)</option>
+                                </select>
+                            </div>
+
+                            <div class="pricing-cards-container">
+                                <!-- Double Room -->
+                                <div class="pricing-room-card">
+                                    <div class="pricing-room-header">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i data-lucide="bed-double" class="icon-darkblue"></i>
+                                            <h4 class="m-0 pricing-room-title">Double</h4>
+                                        </div>
+                                        <span class="room-badge">2 Subrooms</span>
+                                    </div>
+                                    <div class="pricing-subroom-list">
+                                        <div class="pricing-subroom-item">
+                                            <div class="subroom-name">Deluxe</div>
+                                            <div class="subroom-price-input">
+                                                <span class="input-prefix currency-symbol">₹</span>
+                                                <input
+                                                    type="number"
+                                                    class="price-input"
+                                                    value="54999"
+                                                    step="1"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="pricing-subroom-item">
+                                            <div class="subroom-name">Premium</div>
+                                            <div class="subroom-price-input">
+                                                <span class="input-prefix currency-symbol">₹</span>
+                                                <input
+                                                    type="number"
+                                                    class="price-input"
+                                                    value="64999"
+                                                    step="1"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Suite Room -->
+                                <div class="pricing-room-card">
+                                    <div class="pricing-room-header">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i data-lucide="sofa" class="icon-darkblue"></i>
+                                            <h4 class="m-0 pricing-room-title">Suite</h4>
+                                        </div>
+                                        <span class="room-badge">2 Subrooms</span>
+                                    </div>
+                                    <div class="pricing-subroom-list">
+                                        <div class="pricing-subroom-item">
+                                            <div class="subroom-name">Executive</div>
+                                            <div class="subroom-price-input">
+                                                <span class="input-prefix currency-symbol">₹</span>
+                                                <input
+                                                    type="number"
+                                                    class="price-input"
+                                                    value="89999"
+                                                    step="1"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="pricing-subroom-item">
+                                            <div class="subroom-name">Presidential</div>
+                                            <div class="subroom-price-input">
+                                                <span class="input-prefix currency-symbol">₹</span>
+                                                <input
+                                                    type="number"
+                                                    class="price-input"
+                                                    value="149999"
+                                                    step="1"
+                                                    min="0"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="warning-banner">
+                                <strong>Note:</strong> For seasonal pricing hotels, these base rates will be used
+                                initially. After setup and before connecting to channels, you can adjust prices
+                                according to your seasonal structure using the edit pricing facility.
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Age Configuration -->
+                        <div class="section-content">
+                            <div class="form-section-title">Age configuration</div>
+
+                            <p class="form-help pricing-form-help">
+                                Define the age ranges for adults, children, and infants. These ranges will be used for
+                                meal pricing and booking policies.
+                            </p>
+
+                            <div class="age-config-cards">
+                                <div class="age-card">
+                                    <div class="age-icon-box"><i data-lucide="user"></i></div>
+                                    <div class="age-details">
+                                        <label class="age-label">Adult</label>
+                                        <div class="age-inputs">
+                                            <input
+                                                type="number"
+                                                class="age-input"
+                                                value="12"
+                                                min="0"
+                                                max="99"
+                                                id="adultFrom"
+                                            />
+                                            <span class="age-suffix">and above</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="age-card">
+                                    <div class="age-icon-box"><i data-lucide="users"></i></div>
+                                    <div class="age-details">
+                                        <label class="age-label">Child</label>
+                                        <div class="age-inputs">
+                                            <input
+                                                type="number"
+                                                class="age-input"
+                                                value="2"
+                                                min="0"
+                                                max="99"
+                                                id="childFrom"
+                                            />
+                                            <span class="range-separator">to</span>
+                                            <input
+                                                type="number"
+                                                class="age-input"
+                                                value="11"
+                                                min="0"
+                                                max="99"
+                                                id="childTo"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="age-card">
+                                    <div class="age-icon-box"><i data-lucide="baby"></i></div>
+                                    <div class="age-details">
+                                        <label class="age-label">Infant</label>
+                                        <div class="age-inputs">
+                                            <input
+                                                type="number"
+                                                class="age-input"
+                                                value="0"
+                                                min="0"
+                                                max="99"
+                                                id="infantFrom"
+                                            />
+                                            <span class="range-separator">to</span>
+                                            <input
+                                                type="number"
+                                                class="age-input"
+                                                value="1"
+                                                min="0"
+                                                max="99"
+                                                id="infantTo"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Meal Pricing -->
+                        <div class="section-content">
+                            <div class="form-section-title">Meal pricing</div>
+
+                            <div class="info-banner">
+                                <h3>Meal pricing guidelines</h3>
+                                <p>
+                                    <strong>Included meals:</strong> If breakfast or any meal is included in the room
+                                    rate, enter <strong>0</strong> as the price.
+                                </p>
+                                <p>
+                                    <strong>No meals:</strong> Leave the field blank if meals are not offered as part of
+                                    bookings.
+                                </p>
+                                <p>
+                                    <strong>Child discounts:</strong> If you offer discounted meal rates for children,
+                                    enter both adult and child pricing. Age ranges are configured above.
+                                </p>
+                            </div>
+
+                            <div class="meal-pricing-wrapper">
+                                <div class="meal-grid-header">
+                                    <div class="th-meal">Meal plan</div>
+                                    <div class="th-price">
+                                        Adult <span id="adultAgeDisplay" class="age-badge">(12+)</span>
+                                    </div>
+                                    <div class="th-price">
+                                        Child <span id="childAgeDisplay" class="age-badge">(2-11)</span>
+                                    </div>
+                                </div>
+
+                                <div class="meal-grid-body">
+                                    <div class="meal-row-card">
+                                        <div class="meal-name-cell">
+                                            <i data-lucide="coffee" class="meal-icon"></i>
+                                            <span>Breakfast</span>
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="0 if included"
+                                                step="1"
+                                                min="0"
+                                                id="breakfastAdult"
+                                            />
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Leave blank if same"
+                                                step="1"
+                                                min="0"
+                                                id="breakfastChild"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="meal-row-card">
+                                        <div class="meal-name-cell">
+                                            <i data-lucide="utensils" class="meal-icon"></i>
+                                            <span>Half board</span>
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Enter amount"
+                                                step="1"
+                                                min="0"
+                                                id="halfBoardAdult"
+                                            />
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Leave blank if same"
+                                                step="1"
+                                                min="0"
+                                                id="halfBoardChild"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="meal-row-card">
+                                        <div class="meal-name-cell">
+                                            <i data-lucide="utensils-crossed" class="meal-icon"></i>
+                                            <span>Full board</span>
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Enter amount"
+                                                step="1"
+                                                min="0"
+                                                id="fullBoardAdult"
+                                            />
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Leave blank if same"
+                                                step="1"
+                                                min="0"
+                                                id="fullBoardChild"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="meal-row-card">
+                                        <div class="meal-name-cell">
+                                            <i data-lucide="glass-water" class="meal-icon"></i>
+                                            <span>All inclusive</span>
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Enter amount"
+                                                step="1"
+                                                min="0"
+                                                id="allInclusiveAdult"
+                                            />
+                                        </div>
+                                        <div class="meal-price-cell">
+                                            <span class="input-prefix currency-symbol">₹</span>
+                                            <input
+                                                type="number"
+                                                class="meal-input"
+                                                placeholder="Leave blank if same"
+                                                step="1"
+                                                min="0"
+                                                id="allInclusiveChild"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wizard-footer">
+                            <button type="button" class="btn-wizard-back" onclick="showStep(3)">
+                                <i data-lucide="chevron-left"></i>
+                                Back
+                            </button>
+                            <button
+                                type="button"
+                                class="btn-wizard-next"
+                                onclick="if(validatePricingForm()) showStep(5)"
+                            >
+                                Next
+                                <i data-lucide="chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- ADDED: Close Step 4 -->
+
+                <!-- STEP 5 CONTENT -->
+                <div class="step-content d-none" id="step-5">
+                    <!-- Top banner -->
+                    <div class="checklist-banner">
+                        <i data-lucide="file-check" class="checklist-icon"></i>
+                        <div class="checklist-content">
+                            <h6 class="checklist-title">Website content checklist</h6>
+                            <p class="checklist-desc">
+                                Complete each section below to build your hotel website. All images should be high
+                                quality (min 1MB JPG) files with good focus. The form will guide you through exact
+                                dimensions for each section.
+                            </p>
+                        </div>
+                    </div>
+
+                    <form action="#" method="POST" class="wizard-picture-form">
+                        <!-- 1. Basic information -->
+                        <div class="form-section-title mt-0">Basic information</div>
+                        <p class="form-help mb-4">Start with your hotel name and logo</p>
+                        <div class="content-block-clean">
+                            <div class="inner-field-card">
+                                <label class="field-label">
+                                    <i data-lucide="building-2" class="field-icon icon-red"></i>
+                                    Hotel name
+                                </label>
+                                <input type="text" class="form-control" placeholder="e.g., Grand Lagoon Resort & Spa" />
+                            </div>
+
+                            <div class="inner-field-card">
+                                <label class="field-label">
+                                    <i data-lucide="star" class="field-icon icon-yellow"></i>
+                                    Logo
+                                </label>
+
+                                <div class="logo-box-group">
+                                    <div class="logo-box text-center">
+                                        <div class="dashed-box landscape-box">170 × 50px</div>
+                                        <span class="logo-box-text">Landscape logo</span>
+                                    </div>
+                                    <div class="logo-box text-center">
+                                        <div class="dashed-box square-box">50 × 50px</div>
+                                        <span class="logo-box-text">Square logo</span>
+                                    </div>
+                                </div>
+
+                                <input type="file" class="form-control file-input-margin" />
+                                <p class="field-hint mb-0">
+                                    JPEG format, high definition, appears on website and invoices
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2. Home page content -->
+                        <div class="form-section-title">Home page content</div>
+                        <p class="form-help mb-4">The first impression matters most</p>
+                        <div class="content-block-clean">
+                            <div class="inner-field-card">
+                                <label class="field-label">
+                                    <i data-lucide="star" class="field-icon icon-yellow"></i>
+                                    Main hero picture
+                                </label>
+                                <p class="field-sub-label">The first image guests see when they visit your website</p>
+
+                                <div class="image-placeholder text-center">
+                                    <i data-lucide="image" class="placeholder-icon icon-green"></i>
+                                    <div class="dimensions">560 × 520 pixels</div>
+                                    <div class="sub-text">High definition</div>
+                                </div>
+                                <p class="field-desc text-center">Upload 3 to 4 pictures for an auto-scroll carousel</p>
+                                <input type="file" class="form-control file-input-margin" multiple />
+
+                                <div class="hint-box">
+                                    <i data-lucide="lightbulb" class="hint-icon icon-yellow"></i>
+                                    <span class="hint-text"
+                                        ><strong>Tip:</strong> Choose high-quality pictures that showcase your hotel's
+                                        best features</span
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="inner-field-card">
+                                <label class="field-label">
+                                    <i data-lucide="camera" class="field-icon icon-gray"></i>
+                                    Secondary picture
+                                </label>
+                                <p class="field-sub-label">Add local pictures to highlight your property</p>
+
+                                <div class="image-placeholder text-center">
+                                    <i data-lucide="image" class="placeholder-icon icon-gray"></i>
+                                    <div class="dimensions">Standard quality</div>
+                                    <div class="sub-text">Minimum 1900 × 800 pixels</div>
+                                </div>
+                                <input type="file" class="form-control" />
+                            </div>
+
+                            <div class="inner-field-card">
+                                <label class="field-label">
+                                    <i data-lucide="pen-tool" class="field-icon icon-orange"></i>
+                                    Hotel introduction
+                                </label>
+                                <textarea
+                                    class="form-control file-input-margin"
+                                    rows="3"
+                                    placeholder="Write a warm, welcoming introduction to your hotel in 3 to 4 lines. What makes your property special? What experience can guests expect?"
+                                ></textarea>
+                                <p class="field-hint mb-0">
+                                    This text appears next to your secondary picture on the home page
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3. Room pictures -->
+                        <div class="form-section-title">Room pictures</div>
+                        <p class="form-help mb-4">Showcase each room type with stunning photos</p>
+                        <div class="content-block-clean">
+                            <div class="hint-box hint-spaced">
+                                <i data-lucide="lightbulb" class="hint-icon icon-yellow"></i>
+                                <span class="hint-text"
+                                    >Each room type needs 3 to 4 pictures. Multiple pictures create an interactive
+                                    carousel for guests to explore.</span
+                                >
+                            </div>
+
+                            <div id="rooms-container">
+                                <div class="inner-field-card dynamic-item">
+                                    <div class="item-header">
+                                        <label class="field-label mb-0">
+                                            <i data-lucide="bed-double" class="field-icon icon-blue"></i>
+                                            <span class="item-title">Room type 1</span>
+                                        </label>
+                                    </div>
+                                    <input
+                                        type="text"
+                                        class="form-control file-input-margin"
+                                        placeholder="e.g., Deluxe Suite, Standard Room, Family Room"
+                                    />
+
+                                    <div class="image-placeholder text-center">
+                                        <i data-lucide="image" class="placeholder-icon icon-red"></i>
+                                        <div class="dimensions">560 × 520 pixels</div>
+                                        <div class="sub-text">Upload 1 to 4 pictures</div>
+                                    </div>
+                                    <input type="file" class="form-control file-input-margin" multiple />
+                                </div>
+                            </div>
+
+                            <button type="button" class="dashed-border-btn dashed-spaced" id="btn-add-room">
+                                <i data-lucide="plus" class="btn-icon"></i> Add another room type
+                            </button>
+                        </div>
+
+                        <!-- 4. Facilities -->
+                        <div class="form-section-title">Facilities</div>
+                        <p class="form-help mb-4">Highlight your hotel's amenities</p>
+                        <div class="content-block-clean">
+                            <div class="hint-box hint-spaced">
+                                <i data-lucide="lightbulb" class="hint-icon icon-yellow"></i>
+                                <span class="hint-text"
+                                    >Recommended: 4 to 5 different facilities. Each facility can have up to 4
+                                    pictures.</span
+                                >
+                            </div>
+
+                            <div id="facilities-container">
+                                <div class="inner-field-card dynamic-item">
+                                    <div class="item-header">
+                                        <label class="field-label mb-0">
+                                            <i data-lucide="waves" class="field-icon icon-darkblue"></i>
+                                            <span class="item-title">Facility 1</span>
+                                        </label>
+                                    </div>
+                                    <input
+                                        type="text"
+                                        class="form-control file-input-margin"
+                                        placeholder="e.g., Swimming Pool, Restaurant, Gym, Spa"
+                                    />
+
+                                    <div class="image-placeholder text-center">
+                                        <i data-lucide="image" class="placeholder-icon icon-yellow"></i>
+                                        <div class="dimensions">300 × 425 pixels</div>
+                                        <div class="sub-text">Upload facility pictures</div>
+                                    </div>
+                                    <input type="file" class="form-control file-input-margin" multiple />
+                                </div>
+                            </div>
+
+                            <button type="button" class="dashed-border-btn dashed-spaced" id="btn-add-facility">
+                                <i data-lucide="plus" class="btn-icon"></i> Add another facility
+                            </button>
+                        </div>
+
+                        <!-- 5. Guest testimonial -->
+                        <div class="form-section-title">Guest testimonial</div>
+                        <p class="form-help mb-4">Add credibility with a real guest review</p>
+                        <div class="content-block-clean test-block">
+                            <div class="inner-field-card test-card">
+                                <label class="field-label">
+                                    <i data-lucide="user" class="field-icon icon-indigo"></i>
+                                    Guest information
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control file-input-margin"
+                                    placeholder="Guest name (e.g., Sarah Johnson)"
+                                />
+
+                                <div class="image-placeholder rounded-circle test-smile-box">
+                                    <span class="test-smile">😊</span>
+                                </div>
+                                <div class="dimensions text-center dims-margin">450 × 450 pixels (square)</div>
+
+                                <input type="file" class="form-control file-input-margin" />
+
+                                <textarea
+                                    class="form-control file-input-margin"
+                                    rows="3"
+                                    placeholder="Enter the guest's testimonial. What did they love about their stay? Keep it genuine and specific."
+                                ></textarea>
+                                <p class="field-hint mb-0">
+                                    A great testimonial mentions specific features and experiences.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Footer Buttons -->
+                        <div class="wizard-footer">
+                            <button type="button" class="btn-wizard-back" onclick="showStep(4)">
+                                <i data-lucide="chevron-left"></i>
+                                Back
+                            </button>
+                            <button type="button" class="footer-btn submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Closes step-5 -->
+
+                <!-- STEP 5 CONTENT -->
+                <div class="step-content d-none" id="step-6">
+                    <!-- Top banner -->
+                    <div class="checklist-banner">
+                        <i data-lucide="file-check" class="checklist-icon"></i>
+                        <div class="checklist-content">
+                            <h6 class="checklist-title">Website content checklist</h6>
+                            <p class="checklist-desc">
+                                Complete each section below to build your hotel website. All images should be high
+                                quality (min 1MB JPG) files with good focus. The form will guide you through exact
+                                dimensions for each section.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>dsdasd</div>
+                </div>
+                <!-- Closes step-5 -->
+            </div>
+            <!-- Closes wizard-container -->
+        </div>
+        <!-- Closes onboarding-wrapper -->
+
+        <!-- Initialize Lucide Icons -->
+        <script>
+            lucide.createIcons();
+
+            // Simple Wizard Step Toggle Logic
+            function showStep(stepNumber) {
+                // Hide all steps
+                document.querySelectorAll(".step-content").forEach(function (step) {
+                    step.classList.add("d-none");
+                });
+
+                // Show the active step
+                var currentStep = document.getElementById("step-" + stepNumber);
+                if (currentStep) {
+                    currentStep.classList.remove("d-none");
+                }
+
+                // Update header wizard indicators
+                document.querySelectorAll(".wizard-step").forEach(function (indicator, index) {
+                    if (index < stepNumber) {
+                        indicator.classList.add("active");
+                    } else {
+                        indicator.classList.remove("active");
+                    }
+                });
+
+                // Re-render icons incase of dynamic content showing up
+                lucide.createIcons();
+
+                // Scroll to top of the form smoothly
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+
+            // Dynamic Elements Logic
+            document.addEventListener("DOMContentLoaded", function () {
+                function createDynamicItem(type, index) {
+                    var iconName, iconColorClass, placeholderIconColor, dims, subText;
+
+                    if (type === "room") {
+                        iconName = "bed-double";
+                        iconColorClass = "icon-blue";
+                        placeholderIconColor = "icon-red";
+                        dims = "560 × 520 pixels";
+                        subText = "Upload 1 to 4 pictures";
+                    } else {
+                        iconName = "waves";
+                        iconColorClass = "icon-darkblue";
+                        placeholderIconColor = "icon-yellow";
+                        dims = "300 × 425 pixels";
+                        subText = "Upload facility pictures";
+                    }
+
+                    var titleText = (type === "room" ? "Room type " : "Facility ") + index;
+                    var placeholderText =
+                        type === "room"
+                            ? "e.g., Deluxe Suite, Standard Room, Family Room"
+                            : "e.g., Swimming Pool, Restaurant, Gym, Spa";
+
+                    var newItem = document.createElement("div");
+                    newItem.className = "inner-field-card dynamic-item mt-3"; // Adds margin-top relative to standard spacer
+                    newItem.innerHTML = `
+                    <div class="item-header">
+                        <label class="field-label mb-0">
+                            <i data-lucide="${iconName}" class="field-icon ${iconColorClass}"></i>
+                            <span class="item-title">${titleText}</span>
+                        </label>
+                        <button type="button" class="btn-remove-item" aria-label="Remove">
+                            <i data-lucide="x" class="remove-icon"></i>
+                        </button>
+                    </div>
+                    <input type="text" class="form-control file-input-margin" placeholder="${placeholderText}">
+
+                    <div class="image-placeholder text-center">
+                        <i data-lucide="image" class="placeholder-icon ${placeholderIconColor}"></i>
+                        <div class="dimensions">${dims}</div>
+                        <div class="sub-text">${subText}</div>
+                    </div>
+                    <input type="file" class="form-control file-input-margin" multiple>
+                `;
+                    return newItem;
+                }
+
+                // Function to update numbering after deletion
+                function updateNumbering(containerSelector, titlePrefix) {
+                    var items = document.querySelectorAll(containerSelector + " .dynamic-item");
+                    items.forEach((item, index) => {
+                        var titleEl = item.querySelector(".item-title");
+                        if (titleEl) {
+                            titleEl.textContent = titlePrefix + " " + (index + 1);
+                        }
+                    });
+                }
+
+                // Add Room
+                document.getElementById("btn-add-room").addEventListener("click", function () {
+                    var container = document.getElementById("rooms-container");
+                    var currentCount = container.querySelectorAll(".dynamic-item").length;
+                    var newItem = createDynamicItem("room", currentCount + 1);
+                    container.appendChild(newItem);
+                    lucide.createIcons({ root: newItem });
+                });
+
+                // Add Facility
+                document.getElementById("btn-add-facility").addEventListener("click", function () {
+                    var container = document.getElementById("facilities-container");
+                    var currentCount = container.querySelectorAll(".dynamic-item").length;
+                    var newItem = createDynamicItem("facility", currentCount + 1);
+                    container.appendChild(newItem);
+                    lucide.createIcons({ root: newItem });
+                });
+
+                // Remove Item (Event Delegation) - Step 4 dynamic items
+                document.addEventListener("click", function (e) {
+                    var removeBtn = e.target.closest(".btn-remove-item");
+                    if (removeBtn) {
+                        var container = removeBtn.closest("#rooms-container, #facilities-container");
+                        var containerId = container.id;
+
+                        removeBtn.closest(".dynamic-item").remove();
+
+                        if (containerId === "rooms-container") updateNumbering("#rooms-container", "Room type");
+                        if (containerId === "facilities-container")
+                            updateNumbering("#facilities-container", "Facility");
+                    }
+
+                    // Remove Room Card - Step 2
+                    var deleteRoomBtn = e.target.closest(".btn-room-delete");
+                    if (deleteRoomBtn) {
+                        deleteRoomBtn.closest(".room-card").remove();
+                        renumberRoomCards();
+                    }
+                });
+
+                // --- Step 2: Room Inventory Card Logic ---
+
+                var roomCardCount = 1;
+
+                function renumberRoomCards() {
+                    document.querySelectorAll("#room-inventory-list .room-card").forEach(function (card, idx) {
+                        var titleEl = card.querySelector(".room-card-title");
+                        if (titleEl) titleEl.textContent = "Room " + (idx + 1);
+                    });
+                }
+
+                function createRoomCard(index) {
+                    var card = document.createElement("div");
+                    card.className = "room-card";
+                    card.innerHTML = `
+                    <div class="room-card-header">
+                        <h6 class="room-card-title">Room ${index}</h6>
+                        <button type="button" class="btn-room-delete" aria-label="Remove room">
+                            <i data-lucide="trash-2" class="room-delete-icon"></i>
+                        </button>
+                    </div>
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Room type *</label>
+                            <input type="text" class="form-control" placeholder="e.g. Deluxe Double">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Subroom type</label>
+                            <input type="number" class="form-control" value="1" min="1">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Room floor / Location</label>
+                            <input type="text" class="form-control" placeholder="e.g. Ground, 1st Floor">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Room Name (if applicable)</label>
+                            <input type="text" class="form-control" placeholder="e.g. Ocean View Suite">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Room number</label>
+                            <input type="text" class="form-control" placeholder="e.g. 101">
+                        </div>
+                    </div>
+                `;
+                    return card;
+                }
+
+                var addRoomCardBtn = document.getElementById("btn-add-room-card");
+                if (addRoomCardBtn) {
+                    addRoomCardBtn.addEventListener("click", function () {
+                        var list = document.getElementById("room-inventory-list");
+                        roomCardCount = list.querySelectorAll(".room-card").length + 1;
+                        var newCard = createRoomCard(roomCardCount);
+                        list.appendChild(newCard);
+                        lucide.createIcons({ root: newCard });
+                    });
+                }
+
+                // --- Step 2: Subroom Card Logic ---
+
+                function renumberSubroomCards() {
+                    document.querySelectorAll("#subroom-list .room-card").forEach(function (card, idx) {
+                        var titleEl = card.querySelector(".room-card-title");
+                        if (titleEl) titleEl.textContent = "Subroom " + (idx + 1);
+                    });
+                }
+
+                function createSubroomCard(index) {
+                    var card = document.createElement("div");
+                    card.className = "room-card";
+                    card.innerHTML = `
+                    <div class="room-card-header">
+                        <h6 class="room-card-title">Subroom ${index}</h6>
+                        <button type="button" class="btn-subroom-delete" aria-label="Remove subroom">
+                            <i data-lucide="trash-2" class="room-delete-icon"></i>
+                        </button>
+                    </div>
+
+                    <div class="form-section-title">Room Identification</div>
+                    <div class="row gy-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Room type</label>
+                            <input type="text" class="form-control" placeholder="e.g. Double">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Subroom type</label>
+                            <input type="text" class="form-control" placeholder="e.g. Deluxe">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Number Of Rooms</label>
+                            <input type="text" class="form-control" placeholder="e.g. 101">
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">Occupancy Limits</div>
+                    <div class="row gy-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Minimum occupants</label>
+                            <input type="number" class="form-control" placeholder="1" min="1">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Max occupants</label>
+                            <input type="number" class="form-control" placeholder="2" min="1">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Min adults</label>
+                            <input type="number" class="form-control" placeholder="1" min="1">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Max adults</label>
+                            <input type="number" class="form-control" placeholder="2" min="1">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Max children</label>
+                            <input type="number" class="form-control" placeholder="1" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">Bed Details & Sizing</div>
+                    <div class="row gy-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Bed size (single, double, king, queen)</label>
+                            <select class="form-select">
+                                <option selected disabled>Select bed size</option>
+                                <option value="single">Single</option>
+                                <option value="double">Double</option>
+                                <option value="queen">Queen</option>
+                                <option value="king">King</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Approx room size</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="e.g. 350">
+                                <select class="form-select unit-select-width">
+                                    <option value="sqm">m²</option>
+                                    <option value="sqft" selected>ft²</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Sofabed</label>
+                            <select class="form-select">
+                                <option value="no" selected>No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                `;
+                    return card;
+                }
+
+                var addSubroomCardBtn = document.getElementById("btn-add-subroom-card");
+                if (addSubroomCardBtn) {
+                    addSubroomCardBtn.addEventListener("click", function () {
+                        var list = document.getElementById("subroom-list");
+                        var newIndex = list.querySelectorAll(".room-card").length + 1;
+                        var newCard = createSubroomCard(newIndex);
+                        list.appendChild(newCard);
+                        lucide.createIcons({ root: newCard });
+                    });
+                }
+
+                // Delete subroom card (event delegation)
+                document.addEventListener("click", function (e) {
+                    var deleteSubroomBtn = e.target.closest(".btn-subroom-delete");
+                    if (deleteSubroomBtn) {
+                        deleteSubroomBtn.closest(".room-card").remove();
+                        renumberSubroomCards();
+                    }
+                });
+
+                // --- Step 3: Pricing Form Logic ---
+
+                // Update age displays when age configuration changes
+                function updateAgeDisplays() {
+                    var adultFrom = document.getElementById("adultFrom");
+                    var childFrom = document.getElementById("childFrom");
+                    var childTo = document.getElementById("childTo");
+
+                    if (adultFrom && childFrom && childTo) {
+                        var adultDisplay = document.getElementById("adultAgeDisplay");
+                        var childDisplay = document.getElementById("childAgeDisplay");
+                        if (adultDisplay) adultDisplay.textContent = `(${adultFrom.value}+)`;
+                        if (childDisplay) childDisplay.textContent = `(${childFrom.value}-${childTo.value})`;
+                    }
+                }
+
+                var adultFromEl = document.getElementById("adultFrom");
+                if (adultFromEl) adultFromEl.addEventListener("input", updateAgeDisplays);
+
+                var childFromEl = document.getElementById("childFrom");
+                if (childFromEl) childFromEl.addEventListener("input", updateAgeDisplays);
+
+                var childToEl = document.getElementById("childTo");
+                if (childToEl) childToEl.addEventListener("input", updateAgeDisplays);
+
+                // Update currency symbols when currency changes
+                var currencyEl = document.getElementById("currency");
+                if (currencyEl) {
+                    currencyEl.addEventListener("change", function () {
+                        const currencySymbols = {
+                            INR: "₹",
+                            USD: "$",
+                            EUR: "€",
+                            GBP: "£",
+                            AED: "د.إ",
+                            SGD: "S$",
+                        };
+
+                        const symbol = currencySymbols[this.value];
+
+                        // Update all currency symbols
+                        document.querySelectorAll(".input-prefix, .currency-symbol").forEach((el) => {
+                            el.textContent = symbol;
+                        });
+                    });
+                }
+
+                // Initialization logic for Step 3
+                updateAgeDisplays();
+            });
+
+            function validatePricingForm() {
+                // Basic validation for base prices
+                const priceInputs = document.querySelectorAll(".price-input");
+                let hasError = false;
+
+                priceInputs.forEach((input) => {
+                    if (!input.value || parseFloat(input.value) < 0) {
+                        input.classList.add("price-input-warning");
+                        input.classList.remove("price-input-default");
+                        hasError = true;
+                    } else {
+                        input.classList.remove("price-input-warning");
+                        input.classList.add("price-input-default");
+                    }
+                });
+
+                if (hasError) {
+                    alert("Please fill in all base prices with valid amounts.");
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+    </body>
+</html>
